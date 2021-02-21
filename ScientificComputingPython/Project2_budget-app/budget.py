@@ -50,11 +50,27 @@ class Category:
 
         table += f"Total: {round(self.get_balance(),2)}"
         return table
-ans = Category("baju")
-ans.deposit(10000,"Hoyong Deposit")
-ans.withdraw(1600,"ngambil duid")
+def create_spend_chart(categories):
+    result = 'Percentage spent by category\n'
 
-print(ans)
-
-#def create_spend_chart(categories):
-
+    total = sum(x.spent for x in categories)
+    percentages = [(x.spent/total)//0.01 for x in categories]
+    for x in range(100, -10, -10):
+        result = result + str(x).rjust(3, " ") + '|'
+        for y in percentages:
+            if y >= x:
+                result = result + ' o '
+            else:
+                result = result + '   '
+        result = result + ' \n'
+    result = result + '    ' + '-'*len(percentages)*3 + '-\n'
+    maxLength = max(len(x.name) for x in categories)
+    for x in range(maxLength):
+        result = result + '    '
+        for y in categories:
+            if x < len(y.name):
+                result = result + ' ' + y.name[x] + ' '
+            else:
+                result = result + '   '
+        result = result + ' \n'
+    return result.rstrip() +'  '
