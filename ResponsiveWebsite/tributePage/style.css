@@ -1,0 +1,101 @@
+html {
+	font-size: 12px;
+}
+
+body{
+	text-align: center;
+	font-size:18px;
+	margin:0;
+	line-height: 1.5;
+
+}
+
+h1 {
+	font-size:45px;
+}
+
+h2 {
+	font-size : 25px;
+}
+
+a {
+	color : #a2afa2;
+}
+
+a:visited {
+	color: blue;
+}
+
+img {
+
+	max-width: 100%;
+	display : block;
+	margin : 0 auto;
+
+}
+
+#main {
+	padding : 16px;
+	background-color: #eeee;
+	margin : 30px 8px 30px 8px;
+	border-radius: 20px;
+}
+
+#img-div {
+	background-color: white;
+	padding:15px;
+	margin:0px;
+}
+
+#img-caption {
+	margin:16px 0px 6px 0px;
+}
+
+#tribute-info{
+	display : inline;
+}
+
+ul {
+	text-align: left;
+	max-width: 600px;
+	margin: 0px auto 50px auto;
+	line-height: 1.6;
+}
+
+li {
+	margin:15px auto 0px auto
+}
+
+blockquote {
+	font-style : italic;
+	max-width: 550px;
+	margin : 0 auto 50px  auto;
+	text-align: left;
+}
+
+
+@media (max-width : 460px) {
+	#main {
+		margin : 0;
+	}
+}
+
+@media(max-width : 960px) {
+	#main {
+		margin: 0;
+	}
+}
+@media (max-width : 460px) {
+	h1 {
+		font-size: 20px;
+		line-height: 1.2;
+	}
+	
+}
+
+@media (max-width : 960px) {
+
+	#img-caption {
+		font-size : 30px;
+	}
+}
